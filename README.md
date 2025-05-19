@@ -25,8 +25,7 @@
 ## 3. Use Case Descriptions
 
 ### Use Case 1: 회원 가입
-- **Actor:** 사용자  
-- **Precondition:** 없음  
+- **Actor:** 사용자   
 - **Flow:**
   1. 사용자는 ID, 비밀번호, 전화번호를 입력한다.
   2. 시스템은 중복 ID 여부를 확인한다.
@@ -61,21 +60,5 @@
 - **Flow:**
   1. 로그인한 회원이 대여정보 조회 요청
   2. 시스템은 회원이 현재 대여 중인 자전거 리스트를 보여줌
-
----
-
-## 4. Communication Diagram (텍스트 설명)
-
-**시나리오:** 회원이 로그인한 후 자전거를 대여하는 과정  
-
-**객체:** `User`, `LoginController`, `BikeController`, `BikeDB`
-
-**메시지 흐름:**
-1. `User -> LoginController`: 로그인 정보 입력 (ID, PW)
-2. `LoginController -> User`: 인증 결과 반환
-3. `User -> BikeController`: 자전거 대여 요청 (bikeID)
-4. `BikeController -> BikeDB`: 대여 가능 여부 확인
-5. `BikeDB -> BikeController`: 사용 가능
-6. `BikeController -> User`: 대여 완료 응답
 
 ---
